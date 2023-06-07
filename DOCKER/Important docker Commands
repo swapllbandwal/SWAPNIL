@@ -1,0 +1,14 @@
+docker pull {imagename} //pull image from docker hub with latest version
+docker run  {imagename} // pull and run docker image with specified version from docker hub
+docker pull {imagename:version}
+docker run  {imagename:version}
+docker run -d {imagename:version}  //runs in background/detached mode we can continue terminal window
+docker ps //list of running containers
+docker ps -a //Containers history running as well as stopped
+docker stop {containerid/containername}  //running container
+docker start {containerid/containername}  //restart stopped container container
+docker rm {containerid/containername} //delete containers
+
+docker run -d -p{hostosport}:{imageport} {dimagename:version} //to run mutiple container of same image with same ports using port mapping to Host OS ports 
+
+docker -exec -it {containerid/containername} /bin/bash //open container in interactive mode
